@@ -54,7 +54,7 @@ export default extendTheme({
       variants: {
         solid: (props) => ({
           backgroundColor: `${props.colorScheme}.500`,
-          boxShadow: `0 0 10px ${props.theme.colors[props.colorScheme][500]}`,
+          boxShadow: `0 0 10px ${(props.theme.colors[props.colorScheme as any] as any)[500]}`,
           color: mode(undefined, "white")(props),
           fontWeight: "bold",
           _hover: {
